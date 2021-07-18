@@ -3,8 +3,6 @@ package com.example.amqpproducer.service;
 import com.example.amqpproducer.constant.DirectConst;
 import com.example.amqpproducer.constant.FanoutConst;
 import com.example.amqpproducer.constant.TopicConst;
-import org.springframework.amqp.AmqpException;
-import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
