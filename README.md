@@ -57,6 +57,10 @@ Messages from a queue can be "dead-lettered"; that is, republished to an exchang
 - 消息过期（参数名为：x-message-ttl）：The message expires due to [per-message TTL](https://www.rabbitmq.com/ttl.html)
 - 消息超过最大长度（参数名为：x-max-length）：The message is dropped because its queue exceeded a [length limit](https://www.rabbitmq.com/maxlength.html)
 
+>查看有哪些 Arguments 及其名称，可以到 RabbitMQ 的 Management 工具的网页上 ，点击标签页「Queues」，点击下方的「Add a new queue」按钮展开页面 ，可以看到有一行「Arguments」及其下面的参数配置。
+> 
+>这些参数配置（比如"Message TTL"）是可以点击的按钮，点击后，就会显示参数的名称（比如显示"x-message-ttl"）。
+
 Note that expiration of a queue will not dead letter the messages in it.（因为队列失效的消息，不计入中）
 
 Dead letter exchanges (DLXs) are normal exchanges. They can be any of the usual types and are declared as usual.

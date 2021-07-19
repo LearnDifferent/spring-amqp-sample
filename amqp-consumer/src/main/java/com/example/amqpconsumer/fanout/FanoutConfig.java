@@ -22,6 +22,7 @@ public class FanoutConfig {
     }
 
     // 声明队列（这个队列为 org.springframework.amqp.core.Queue）
+
     /**
      * 这个队列比较特殊，设置了队列内消息的 TTL。如果消息到期后，会被
      *
@@ -30,14 +31,7 @@ public class FanoutConfig {
     @Bean
     public Queue queueOneFanout() {
 
-        /*
-        可以传入一些 args 来配置队列。
-
-        查看有哪些 Arguments 及其名称，可以到 RabbitMQ 的 Management 工具的网页上
-        ，点击标签页「Queues」，点击下方的「Add a new queue」按钮展开页面
-        ，看到有一行「Arguments」及其下面的参数配置。
-        这些参数配置，比如「Message TTL」是可以点击的按钮，点击后，就会显示参数的名称。
-        */
+        // 可以传入一些 args 来配置队列。
         Map<String, Object> args = new HashMap<>();
 
         /*
