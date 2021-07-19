@@ -2,9 +2,9 @@
 
 使用 IDEA 创建 Spring Boot 项目，勾选 Web 的 Spring Web 和 Messaging 的 Spring for RabbitMQ。
 
-因为需要创建生产者和消费者两个模块，所以在创建好后，要删除包括 src 在内的其他文件，只保留 pom.xml 和 .idea 文件夹。
+因为需要创建生产者和消费者两个模块，所以在创建好后，要删除包括 src 在内的其他文件，只保留 pom.xml 文件夹即可。
 
-然后分别创建 Spring Boot 子模块 amqp-producer 和 amqp-consumer，并修改 [amqp-producer 的 pom.xml](./amqp-producer/pom.xml) 和 [amqp-consumer 的 pom.xml](./amqp-consumer/pom.xml) （具体的修改需要点开文件查看）
+然后分别创建 Spring Boot 子模块 amqp-producer 和 amqp-consumer，并修改 [amqp-producer 的 pom.xml](./amqp-producer/pom.xml) 和 [amqp-consumer 的 pom.xml](./amqp-consumer/pom.xml) （具体的修改需要点开相应的 pom.xml 文件查看，上面标有注解）
 
 YAML 配置文件中配置了 RabbitMQ 相关信息和端口号，其中 amqp-producer 模块的端口号为 8091，amqp-consumer 模块的端口号为 8090。
 
