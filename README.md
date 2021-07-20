@@ -75,3 +75,8 @@ GitHub 链接：
 
 - [RabbitMQ.md](https://github.com/LearnDifferent/my-notes/blob/master/RabbitMQ%E7%AC%94%E8%AE%B0.md)
 - [my-rabbitmq-java-exercises](https://github.com/LearnDifferent/my-rabbitmq-java-exercises)
+
+待补充：
+
+- [ ] 异步确认
+- [ ] 分布式的 RabbitMQ
