@@ -51,7 +51,5 @@ TTL 和 Dead Letter Exchange：
 
 RabbitMQ 相关链接：
 
-- [RabbitMQ.md](https://github.com/LearnDifferent/my-notes/blob/master/RabbitMQ%E7%AC%94%E8%AE%B0.md)
+- [RabbitMQ笔记.md](https://github.com/LearnDifferent/my-notes/blob/master/RabbitMQ%E7%AC%94%E8%AE%B0.md)
 - [my-rabbitmq-java-exercises](https://github.com/LearnDifferent/my-rabbitmq-java-exercises)
-- [rabbitmq-cluster](https://github.com/LearnDifferent/rabbitmq-cluster)
-
