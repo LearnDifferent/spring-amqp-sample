@@ -1,8 +1,25 @@
 spring:
+  profiles:
+    active: cluster
   rabbitmq:
-    host: "localhost"
-    port: 5672
     username: "user"
     password: "123"
 server:
   port: 8091
+
+---
+
+# 单机版，需要配置 host 和 port
+spring:
+  profiles: singleton
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+
+---
+
+# 集群，使用的是 addresses
+spring:
+  profiles: cluster
+  rabbitmq:
+    addresses: "localhost:5672"
