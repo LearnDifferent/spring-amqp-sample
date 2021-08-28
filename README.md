@@ -1,4 +1,8 @@
-# 创建项目及配置文件
+# Spring AMQP Sample
+
+> This project hosts a sample for [Spring AMQP](https://github.com/SpringSource/spring-amqp)
+
+## 创建项目及配置文件
 
 使用 IDEA 创建 Spring Boot 项目，勾选 Web 的 Spring Web 和 Messaging 的 Spring for RabbitMQ。
 
@@ -6,9 +10,9 @@
 
 然后分别创建 Spring Boot 子模块 amqp-producer 和 amqp-consumer，并修改 [amqp-producer 的 pom.xml](./amqp-producer/pom.xml) 和 [amqp-consumer 的 pom.xml](./amqp-consumer/pom.xml) （具体的修改需要点开相应的 pom.xml 文件查看，上面标有注解）
 
-# 项目相关说明
+## 项目相关说明
 
-## 配置文件
+### 配置文件
 
 [amqp-producer 模块的配置文件](./amqp-producer/src/main/resources/application.yml) 和 [amqp-consumer 模块的配置文件](./amqp-consumer/src/main/resources/application.yml)  配置了：
 
@@ -19,12 +23,12 @@
 	- amqp-producer 模块的端口号为 8091
 	- amqp-consumer 模块的端口号为 8090。
 
-## 配置方式
+### 配置方式
 
 - fanout 和 direct 模式使用的是配置类的方式
 - topic 模式使用的注解方式
 
-## 配置类
+### 配置类
 
 因为这个项目的 Configuration 类只在 amqp-consumer 模块中有（比如 [DirectConfig.java](./amqp-consumer/src/main/java/com/example/amqpconsumer/direct/DirectConfig.java) 和 [FanoutConfig.java](./amqp-consumer/src/main/java/com/example/amqpconsumer/fanout/FanoutConfig.java) 等配置类都在 amqp-consumer 模块中），所以要先启动该模块才会加载配置类去创建交换机和队列。
 
@@ -32,7 +36,7 @@
 
 也可以在全部模块内，使用内容相同的 Configuration 类，这样就不用考虑启动顺序了。
 
-## 超时和死信相关演示
+### 超时和死信相关演示
 
 TTL 和 Dead Letter Exchange：
 
@@ -47,7 +51,7 @@ TTL 和 Dead Letter Exchange：
 
 > 测试 TTL 的时候，需要复制相应的配置类到生产者的模块（因为生产者模块没有配置类），然后启动生产者模块，发送消息，观察消息是否到期后会失效
 
-# 相关链接
+## 相关链接
 
 RabbitMQ 相关链接：
 
