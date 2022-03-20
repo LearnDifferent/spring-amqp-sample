@@ -41,10 +41,10 @@
 TTL 和 Dead Letter Exchange：
 
 - 设置队列内的消息的过期时间的方法：
-	- 参考 [FanoutConfig.java](./amqp-consumer/src/main/java/com/example/amqpconsumer/fanout/FanoutConfig.java) 中的 `public Queue queueOneFanout()` 
+	- 参考 [FanoutConfig.java](./amqp-consumer/src/main/java/com/example/amqpconsumer/fanout/FanoutConfig.java) 中的 [`public Queue queueOneFanout()`](https://github.com/LearnDifferent/spring-amqp-sample/blob/master/amqp-consumer/src/main/java/com/example/amqpconsumer/fanout/FanoutConfig.java#L32) 
 	- 例子中有 Dead Letter 相关的设置，如果该队列内的消息过期后，会放入 Dead Letter 的队列中
 - 设置具体某条消息的过期时间的方法：
-	- 参考 [RabbitProducerService.java](./amqp-producer/src/main/java/com/example/amqpproducer/service/RabbitProducerService.java) 中的 `public void direct(String msg, Integer id)` 的 if 判断语句里面的内容
+	- 参考 [RabbitProducerService.java](./amqp-producer/src/main/java/com/example/amqpproducer/service/RabbitProducerService.java) 中的 [`public void direct(String msg, Integer id)` 的 if 判断语句](https://github.com/LearnDifferent/spring-amqp-sample/blob/master/amqp-producer/src/main/java/com/example/amqpproducer/service/RabbitProducerService.java#L33) 里面的内容
 	- 这个例子中没有 Dead Letter 相关的设置，所以过期后会直接被抛弃
 
 - Dead Letter Exchange 相关配置，可以查看 [DeadLetterConfig.java](./amqp-consumer/src/main/java/com/example/amqpconsumer/dlx/DeadLetterConfig.java)
